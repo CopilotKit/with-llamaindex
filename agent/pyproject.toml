@@ -15,16 +15,17 @@ dependencies = [
     "jsonpatch>=1.33",
     "uvicorn>=0.27.0",
     "fastapi>=0.100.0",
+    "python-dotenv>=1.0.0",
 ]
 authors = [
     { name = "Logan Markewich", email = "logan@runllama.ai" },
 ]
 
 [tool.hatch.build.targets.sdist]
-include = ["agent/"]
+include = ["main.py", "src/"]
 
 [tool.hatch.build.targets.wheel]
-include = ["agent/"]
+include = ["main.py", "src/"]
 
 [project.scripts]
-dev = "agent:main"
+dev = "main:main"
